@@ -1,0 +1,19 @@
+{
+    "name": "flsouto/htattrs",
+    "description": "Build html attributes through the ArrayObject API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "fabio",
+            "email": "fabiolimasouto@gmail.com"
+        }
+    ],
+    "keywords" : ["html"],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-0": {
+            "FlSouto": "./"
+        }
+    }
+}
