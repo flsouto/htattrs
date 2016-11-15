@@ -5,6 +5,13 @@ namespace FlSouto;
 
 class HtAttrs extends \ArrayObject{
 
+    function __construct($input=[], $flags = 0, $iterator_class="ArrayIterator"){
+        parent::__construct([], $flags, $iterator_class);
+        if(!empty($input)){
+            $this->exchangeArray($input);
+        }
+    }
+
     function exchangeArray($input)
     {
         if(isset($input['style'])){
