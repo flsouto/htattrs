@@ -12,6 +12,23 @@ class HtAttrs extends \ArrayObject{
         }
     }
 
+    function merge(array $attrs){
+
+        $store = $this;
+        foreach($attrs as $k=>$v){
+            if(is_array($v)){
+                foreach($v as $k2=>$v2){
+                    $store[$k][$k2] = $v2;
+                }
+            } else {
+                $store[$k] = $v;
+            }
+        }
+
+        return $this;
+
+    }
+
     function exchangeArray($input)
     {
         if(isset($input['style'])){
